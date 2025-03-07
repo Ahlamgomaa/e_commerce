@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/constant/routeapp.dart';
+import 'package:e_commerce_app/data/dataSource/static/static.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
@@ -11,12 +13,16 @@ class Onboardingcontrollerimp extends Onboardingcontroller {
   int currentpage = 0;
   @override
   next() {
-    currentpage++;  
-    pageController.animateToPage(
-      currentpage,
-      duration: Duration(milliseconds: 150),
-      curve: Curves.easeInOut,
-    );
+    currentpage++;
+    if (currentpage > onboardingList.length-1) {
+      Get.offAllNamed(Routeapp.login);
+    } else {
+      pageController.animateToPage(
+        currentpage,
+        duration: Duration(milliseconds: 150),
+        curve: Curves.easeInOut,
+      );
+    }
   }
 
   @override
