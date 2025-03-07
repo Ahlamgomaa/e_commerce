@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
-class onBoarding extends StatelessWidget{
+class OnBoarding extends StatelessWidget{
+  const OnBoarding({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+    
+  }
   
 }
