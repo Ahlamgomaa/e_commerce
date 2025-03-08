@@ -19,7 +19,10 @@ class Custombutton extends GetView<Onboardingcontrollerimp> {
         },
         color: Colorapp.primaryColor,
         textColor: Colors.white,
-        child: Text("Continue"),
+        child: Text(
+          "Continue",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

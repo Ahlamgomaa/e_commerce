@@ -5,7 +5,8 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      height: 100,
       child: Text('Login'),
     );
   }
