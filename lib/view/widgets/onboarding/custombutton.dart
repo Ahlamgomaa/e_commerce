@@ -10,7 +10,6 @@ class Custombutton extends GetView<Onboardingcontrollerimp> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 45),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
       height: 45,
       child: MaterialButton(
         padding: EdgeInsets.symmetric(horizontal: 100),

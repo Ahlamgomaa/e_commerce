@@ -17,18 +17,20 @@ class Custompageview extends GetView<Onboardingcontrollerimp> {
       itemBuilder:
           (context, i) => Column(
             children: [
+              
+              SizedBox(height: 80),
+              Image.asset(
+                onboardingList[i].image!,
+                // height: 230,
+                // width: 200,
+                // fit: BoxFit.fill,
+              ),
+              SizedBox(height: 50),
               Text(
                 onboardingList[i].title!,
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
-              SizedBox(height: 80),
-              Image.asset(
-                onboardingList[i].image!,
-                height: 230,
-                width: 200,
-                fit: BoxFit.fill,
-              ),
-              SizedBox(height: 80),
+              SizedBox(height: 40),
               Container(
                 width: double.infinity,
                 alignment: Alignment.center,

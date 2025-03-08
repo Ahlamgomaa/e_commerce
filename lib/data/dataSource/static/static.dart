@@ -17,9 +17,9 @@ List<Onboardingmodel> onboardingList=[
     image: Imageassets.onboardingimagethree,
     body: 'best Tracker has been used for\n track your order.you \'ll know where\n your Product is at the moment'
   ),
-  Onboardingmodel(
-    title: 'Fast Delivery',
-    image: Imageassets.onboardingimagefour,
-    body: 'Reliable and fast delivery.We \n deliver your Product the Fastest\n way possible'
-  ),
+  // Onboardingmodel(
+  //   title: 'Fast Delivery',
+  //   image: Imageassets.onboardingimagefour,
+  //   body: 'Reliable and fast delivery.We \n deliver your Product the Fastest\n way possible'
+  // ),
 ];
