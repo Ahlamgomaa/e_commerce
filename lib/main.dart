@@ -2,7 +2,7 @@ import 'package:e_commerce_app/core/constant/colorapp.dart';
 import 'package:e_commerce_app/core/localization/translation.dart';
 import 'package:e_commerce_app/core/services/services.dart';
 import 'package:e_commerce_app/routes.dart';
-import 'package:e_commerce_app/view/screens/onboarding.dart';
+import 'package:e_commerce_app/view/screens/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -36,7 +36,7 @@ class EcommerceApp extends StatelessWidget{
                   ),
         ),
       ),
-      home: OnBoarding(),
+      home: Language(),
       routes: routes,
     );
   }
