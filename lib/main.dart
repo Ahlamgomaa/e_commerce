@@ -1,10 +1,12 @@
 import 'package:e_commerce_app/core/constant/colorapp.dart';
+import 'package:e_commerce_app/core/localization/changelocal.dart';
 import 'package:e_commerce_app/core/localization/translation.dart';
 import 'package:e_commerce_app/core/services/services.dart';
 import 'package:e_commerce_app/routes.dart';
 import 'package:e_commerce_app/view/screens/language.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
+
 
 void main () async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +18,11 @@ class EcommerceApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    LocalController controller=Get.put(LocalController()); 
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
+      locale: controller.language,
       theme: ThemeData(
         fontFamily: 'playfair',
         textTheme: TextTheme(
