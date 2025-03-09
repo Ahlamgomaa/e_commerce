@@ -1,10 +1,14 @@
 import 'package:e_commerce_app/core/constant/colorapp.dart';
+import 'package:e_commerce_app/core/localization/translation.dart';
+import 'package:e_commerce_app/core/services/services.dart';
 import 'package:e_commerce_app/routes.dart';
 import 'package:e_commerce_app/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-void main (){
+void main () async{
+  WidgetsFlutterBinding.ensureInitialized();
+   await initialServices();
   runApp(EcommerceApp());
 }
 class EcommerceApp extends StatelessWidget{
@@ -13,6 +17,7 @@ class EcommerceApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'playfair',
