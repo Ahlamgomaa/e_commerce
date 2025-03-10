@@ -32,6 +32,12 @@ class EcommerceApp extends StatelessWidget{
                   fontSize: 22,
                   color: Colorapp.black,
                 ),
+                headlineMedium: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'cairo',
+                  fontSize: 30,
+                  color: Colorapp.black,
+                ),
           bodySmall:TextStyle(
                     height: 1.5,
                     color: Colorapp.grey,
