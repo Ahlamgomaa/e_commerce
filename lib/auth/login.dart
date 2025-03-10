@@ -1,6 +1,9 @@
 import 'package:e_commerce_app/core/constant/colorapp.dart';
+import 'package:e_commerce_app/view/widgets/auth/customtextbody.dart';
+import 'package:e_commerce_app/view/widgets/auth/customtextformfield.dart';
+import 'package:e_commerce_app/view/widgets/auth/customtextmedium.dart';
+import 'package:e_commerce_app/view/widgets/auth/customtexttitle.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -10,12 +13,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          '3'.tr,
-          style: Theme.of(
-            context,
-          ).textTheme.headlineLarge!.copyWith(color: Colorapp.grey),
-        ),
+        title: CustomtextTitle(number: 3),
         backgroundColor: Colorapp.backgroundcolor,
         elevation: 0,
       ),
@@ -24,53 +22,20 @@ class Login extends StatelessWidget {
         child: ListView(
           children: [
             SizedBox(height: 25),
-            Text(
-              "2".tr,
-              textAlign: TextAlign.center,
-              style: Theme.of(
-                context,
-              ).textTheme.headlineMedium!.copyWith(color: Colorapp.black),
-            ),
+              Customtextmedium(number: 2,),
             SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Text(
-                "4".tr,
-                textAlign: TextAlign.center,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodySmall!.copyWith(color: Colorapp.grey),
-              ),
+            CustomtextBody(number: 4),  
+            SizedBox(height: 75),
+            Customformfield(
+              hintText: 'Enter Your Email ',
+              labelText: 'Email',
+              icon: Icons.email_outlined,
             ),
-            SizedBox(height: 40),
-            TextFormField(
-              decoration: InputDecoration(
-                floatingLabelBehavior: FloatingLabelBehavior.always,
 
-                contentPadding: EdgeInsets.symmetric(horizontal: 30),
-                label: Text("Email", style: TextStyle(color: Colorapp.grey)),
-                hintText: 'Enter Your Email',
-                hintStyle: TextStyle(color: Colorapp.grey),
-                suffixIcon: Icon(Icons.email_outlined, color: Colorapp.grey),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(45),
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            TextFormField(
-              decoration: InputDecoration(
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 30),
-                label: Text("Password", style: TextStyle(color: Colorapp.grey)),
-
-                hintText: 'Enter Your Password',
-                hintStyle: TextStyle(color: Colorapp.grey),
-                suffixIcon: Icon(Icons.password_outlined, color: Colorapp.grey),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(45),
-                ),
-              ),
+            Customformfield(
+              hintText: 'Enter Your Password',
+              labelText: 'Password',
+              icon: Icons.lock_outline,
             ),
           ],
         ),
