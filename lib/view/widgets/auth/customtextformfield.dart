@@ -18,7 +18,6 @@ class Customformfield extends StatelessWidget {
       child: TextFormField(
         decoration: InputDecoration(
           floatingLabelBehavior: FloatingLabelBehavior.always,
-
           contentPadding: EdgeInsets.symmetric(horizontal: 35, vertical: 16),
           label: Container(
             margin: EdgeInsets.symmetric(horizontal: 7),

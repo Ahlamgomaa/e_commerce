@@ -42,7 +42,7 @@ class EcommerceApp extends StatelessWidget{
                     height: 1.5,
                     color: Colorapp.grey,
                     fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
         ),
       ),
