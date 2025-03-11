@@ -6,7 +6,8 @@ class Customformfield extends StatelessWidget {
     super.key,
     required this.hintText,
     required this.labelText,
-    required this.icon, required this.mycontroller,
+    required this.icon,
+    required this.mycontroller,
   });
   final String labelText;
   final String hintText;
@@ -18,7 +19,7 @@ class Customformfield extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 25),
       child: TextFormField(
         decoration: InputDecoration(
-         focusedBorder: OutlineInputBorder(
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colorapp.primaryColor, width: 2),
             borderRadius: BorderRadius.circular(40),
           ),
@@ -26,7 +27,13 @@ class Customformfield extends StatelessWidget {
           contentPadding: EdgeInsets.symmetric(horizontal: 35, vertical: 16),
           label: Container(
             margin: EdgeInsets.symmetric(horizontal: 7),
-            child: Text(labelText, style: TextStyle(color: Colorapp.primaryColor)),
+            child: Text(
+              labelText,
+              style: TextStyle(
+                color: Colorapp.primaryColor,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           hintText: hintText,
           hintStyle: TextStyle(color: Colorapp.grey, fontSize: 14),
