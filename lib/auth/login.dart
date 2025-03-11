@@ -1,17 +1,24 @@
+import 'package:e_commerce_app/controller/auth/signin_controller.dart';
 import 'package:e_commerce_app/core/constant/colorapp.dart';
+
+
 import 'package:e_commerce_app/view/widgets/auth/custombuttonauth.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextbody.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextformfield.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextmedium.dart';
+import 'package:e_commerce_app/view/widgets/auth/customtextsignuporsinin.dart';
+
 import 'package:e_commerce_app/view/widgets/auth/customtexttitle.dart';
 import 'package:e_commerce_app/view/widgets/auth/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
+   SigninControllerImp controller= Get.put(SigninControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -31,12 +38,14 @@ class Login extends StatelessWidget {
             CustomtextBody(number: 4),
             SizedBox(height: 30),
             Customformfield(
+              mycontroller: controller.email,
               hintText: 'Enter Your Email ',
               labelText: 'Email',
               icon: Icons.email_outlined,
             ),
 
             Customformfield(
+              mycontroller: controller.password,
               hintText: 'Enter Your Password',
               labelText: 'Password',
               icon: Icons.lock_outline,
@@ -45,21 +54,10 @@ class Login extends StatelessWidget {
             SizedBox(height: 20),
             CustomButtonAuth(text: "Sign In", onPressed: () {}),
             SizedBox(height: 35),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center ,
-              children: [
-                Text(r"Don't have an account? "),
-                InkWell(
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colorapp.primaryColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
+            Customtextsignuporsinin(
+              text1: r"Don't have an account? ",
+              text2: 'Sign Up',
+              onTap: (){controller.goToSignUp();},
             ),
           ],
         ),
