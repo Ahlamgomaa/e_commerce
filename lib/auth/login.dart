@@ -1,7 +1,6 @@
 import 'package:e_commerce_app/controller/auth/signin_controller.dart';
 import 'package:e_commerce_app/core/constant/colorapp.dart';
 
-
 import 'package:e_commerce_app/view/widgets/auth/custombuttonauth.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextbody.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextformfield.dart';
@@ -18,7 +17,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   SigninControllerImp controller= Get.put(SigninControllerImp());
+    SigninControllerImp controller = Get.put(SigninControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -50,14 +49,21 @@ class Login extends StatelessWidget {
               labelText: 'Password',
               icon: Icons.lock_outline,
             ),
-            Text("Forget Password?", textAlign: TextAlign.end),
+            InkWell(
+              onTap: () {
+                controller.goToForgetPassword();
+              },
+              child: Text("Forget Password?", textAlign: TextAlign.end),
+            ),
             SizedBox(height: 20),
             CustomButtonAuth(text: "Sign In", onPressed: () {}),
             SizedBox(height: 35),
             Customtextsignuporsinin(
               text1: r"Don't have an account? ",
               text2: 'Sign Up',
-              onTap: (){controller.goToSignUp();},
+              onTap: () {
+                controller.goToSignUp();
+              },
             ),
           ],
         ),

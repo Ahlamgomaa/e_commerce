@@ -7,6 +7,7 @@ abstract class SigninController extends GetxController {
   late TextEditingController password; 
   login();
   goToSignUp();
+  goToForgetPassword();
   
 }
 class SigninControllerImp extends SigninController{
@@ -28,5 +29,10 @@ class SigninControllerImp extends SigninController{
   email.dispose();
   password.dispose(); 
     super.dispose();
+  }
+  
+  @override
+  goToForgetPassword() {
+   Get.toNamed(Routeapp.forgetPassword);
   }
 }

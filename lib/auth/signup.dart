@@ -74,7 +74,7 @@ class SignUp extends StatelessWidget
               text1: r"Your have an account? ",
               text2: 'Sign In',
               onTap: (){
-                print("klj");
+                
                 controller.goToSignIn();
               },
             ),
