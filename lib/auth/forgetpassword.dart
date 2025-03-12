@@ -32,7 +32,7 @@ class Forgetpassword extends StatelessWidget {
             // SizedBox(height: 25),
             Customtextmedium(number: 8),
             SizedBox(height: 10),
-            CustomtextBody(number: 6),
+            CustomtextBody(number: 11),
             SizedBox(height: 30),
 
             Customformfield(
@@ -43,7 +43,9 @@ class Forgetpassword extends StatelessWidget {
             ),
 
             SizedBox(height: 10),
-            CustomButtonAuth(text: "Check ", onPressed: () {}),
+            CustomButtonAuth(text: "Check ", onPressed: () {
+              controller.goToVerifyCode();
+            }),
             SizedBox(height: 35),
           ],
         ),

@@ -1,4 +1,5 @@
 
+import 'package:e_commerce_app/core/constant/routeapp.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
   checkemail() {}
   @override
   goToVerifyCode() {
-   
+   Get.offNamed(Routeapp.verifyCode);
   }
 
   @override

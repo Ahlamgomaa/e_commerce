@@ -33,6 +33,6 @@ class SigninControllerImp extends SigninController{
   
   @override
   goToForgetPassword() {
-   Get.toNamed(Routeapp.forgetPassword);
+   Get.offNamed(Routeapp.forgetPassword);
   }
 }
