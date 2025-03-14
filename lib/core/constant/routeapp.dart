@@ -7,6 +7,5 @@ class Routeapp {
   static const String verifyCode ='/verifycode ';
   static const String successResetPassword='/successresetpassword';
   static const String successSignUp='/successSignUp';
-
-  
+  static const String checkEmail='/checkemail';
 }

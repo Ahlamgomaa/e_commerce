@@ -68,7 +68,9 @@ class SignUp extends StatelessWidget
             ),
             
             SizedBox(height: 10),
-            CustomButtonAuth(text: "Sign Up", onPressed: () {}),
+            CustomButtonAuth(text: "Sign Up", onPressed: () {
+              controller.signup();
+            }),
             SizedBox(height: 35),
             Customtextsignuporsinin(
               text1: r"Your have an account? ",

@@ -46,7 +46,9 @@ class ResetPassword extends StatelessWidget {
               icon: Icons.lock_outlined,
             ),
             SizedBox(height: 10),
-            CustomButtonAuth(text: "Save", onPressed: () {}),
+            CustomButtonAuth(text: "Save", onPressed: () {
+              controller.goToSuccessResetPassword();
+            }),
             SizedBox(height: 35),
           ],
         ),

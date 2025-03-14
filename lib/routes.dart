@@ -1,13 +1,15 @@
-import 'package:e_commerce_app/auth/forgetpassword.dart';
+import 'package:e_commerce_app/auth/forgetpassword/forgetpassword.dart';
 import 'package:e_commerce_app/auth/login.dart';
-import 'package:e_commerce_app/auth/reset_password.dart';
+import 'package:e_commerce_app/auth/forgetpassword/reset_password.dart';
 import 'package:e_commerce_app/auth/signup.dart';
-import 'package:e_commerce_app/auth/success_reset_password.dart';
+import 'package:e_commerce_app/auth/forgetpassword/success_reset_password.dart';
 import 'package:e_commerce_app/auth/success_signup.dart';
-import 'package:e_commerce_app/auth/veryfiy_code.dart';
+import 'package:e_commerce_app/auth/forgetpassword/veryfiy_code.dart';
 import 'package:e_commerce_app/core/constant/routeapp.dart';
 import 'package:e_commerce_app/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
+
+import 'auth/check_email.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   //onboarding 
@@ -20,4 +22,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   Routeapp.resetPassword:(context)=>ResetPassword(),
   Routeapp.successResetPassword:(context)=>SuccessResetPassword(),
   Routeapp.successSignUp:(context)=>SuccessSignup(),
+  Routeapp.checkEmail:(context)=>CheckEmail(),
+
 };

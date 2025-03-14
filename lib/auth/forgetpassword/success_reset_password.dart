@@ -1,12 +1,12 @@
-import 'package:e_commerce_app/core/constant/colorapp.dart';
-import 'package:e_commerce_app/view/widgets/auth/custombuttonauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../view/widgets/auth/customtexttitle.dart';
+import '../../core/constant/colorapp.dart';
+import '../../view/widgets/auth/custombuttonauth.dart';
+import '../../view/widgets/auth/customtexttitle.dart';
 
-class SuccessSignup extends StatelessWidget {
-  const SuccessSignup({super.key});
+class SuccessResetPassword extends StatelessWidget {
+  const SuccessResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,6 @@ class SuccessSignup extends StatelessWidget {
         backgroundColor: Colorapp.backgroundcolor,
         elevation: 0,
       ),
-
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -46,7 +45,9 @@ class SuccessSignup extends StatelessWidget {
               width: double.infinity,
               child: CustomButtonAuth(text: "Go To Login", onPressed: () {}),
             ),
-            SizedBox(height: 40),
+            SizedBox(
+                height: 40
+            )
           ],
         ),
       ),
