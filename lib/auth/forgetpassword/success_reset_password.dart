@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../controller/auth/success_reset_password_controller.dart';
 import '../../core/constant/colorapp.dart';
 import '../../view/widgets/auth/custombuttonauth.dart';
 import '../../view/widgets/auth/customtexttitle.dart';
@@ -10,6 +11,9 @@ class SuccessResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SuccessResetPasswordControllerImp controller = Get.put(
+      SuccessResetPasswordControllerImp(),
+    );
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -43,11 +47,14 @@ class SuccessResetPassword extends StatelessWidget {
             Spacer(),
             Container(
               width: double.infinity,
-              child: CustomButtonAuth(text: "Go To Login", onPressed: () {}),
+              child: CustomButtonAuth(
+                text: "Go To Login",
+                onPressed: () {
+                  controller.goToLogin();
+                },
+              ),
             ),
-            SizedBox(
-                height: 40
-            )
+            SizedBox(height: 40),
           ],
         ),
       ),

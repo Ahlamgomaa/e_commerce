@@ -3,6 +3,8 @@ import 'package:e_commerce_app/view/widgets/auth/custombuttonauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controller/auth/success_signup_controller.dart';
+import '../core/constant/routeapp.dart';
 import '../view/widgets/auth/customtexttitle.dart';
 
 class SuccessSignup extends StatelessWidget {
@@ -10,6 +12,7 @@ class SuccessSignup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SucessSignUpControllerImp controller = Get.put(SucessSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -44,7 +47,12 @@ class SuccessSignup extends StatelessWidget {
             Spacer(),
             Container(
               width: double.infinity,
-              child: CustomButtonAuth(text: "Go To Login", onPressed: () {}),
+              child: CustomButtonAuth(
+                text: "Go To Login",
+                onPressed: () {
+                  controller.goToLogin();
+                },
+              ),
             ),
             SizedBox(height: 40),
           ],

@@ -44,7 +44,7 @@ class CheckEmail extends StatelessWidget {
             CustomButtonAuth(
               text: "Check ",
               onPressed: () {
-                controller.goToSucessSignUp();
+                controller.goToVerifyCode();
               },
             ),
             SizedBox(height: 35),

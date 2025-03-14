@@ -10,6 +10,7 @@ import 'package:e_commerce_app/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
 import 'auth/check_email.dart';
+import 'auth/verify_code_signup.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   //onboarding 
@@ -23,5 +24,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   Routeapp.successResetPassword:(context)=>SuccessResetPassword(),
   Routeapp.successSignUp:(context)=>SuccessSignup(),
   Routeapp.checkEmail:(context)=>CheckEmail(),
+  Routeapp.verifyCodeSignup:(context)=>VerifyCodeSignup(),
 
 };
