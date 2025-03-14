@@ -24,29 +24,7 @@ class EcommerceApp extends StatelessWidget{
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       locale: controller.language,
-      theme: ThemeData(
-        fontFamily: 'playfair',
-        textTheme: TextTheme(
-          headlineLarge: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'cairo',
-                  fontSize: 22,
-                  color: Colorapp.black,
-                ),
-                headlineMedium: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'cairo',
-                  fontSize: 30,
-                  color: Colorapp.black,
-                ),
-          bodySmall:TextStyle(
-                    height: 1.5,
-                    color: Colorapp.grey,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                  ),
-        ),
-      ),
+      theme:controller.themeapp,
       home: Language(),
       routes: routes,
     );

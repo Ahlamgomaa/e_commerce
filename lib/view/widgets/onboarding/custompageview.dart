@@ -3,6 +3,8 @@ import 'package:e_commerce_app/data/dataSource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/constant/colorapp.dart';
+
 class Custompageview extends GetView<Onboardingcontrollerimp> {
   const Custompageview({super.key});
 
@@ -18,26 +20,38 @@ class Custompageview extends GetView<Onboardingcontrollerimp> {
           (context, i) => Column(
             children: [
               
-              SizedBox(height: 80),
+              SizedBox(height: 60),
               Image.asset(
                 onboardingList[i].image!,
                 // height: 230,
                 // width: 200,
-                // fit: BoxFit.fill,
-              ),
-              SizedBox(height: 50),
-              Text(
-                onboardingList[i].title!,
-                style: Theme.of(context).textTheme.headlineLarge,
+                height: Get.width/1.3  ,
+                fit: BoxFit.fill,
               ),
               SizedBox(height: 40),
+              Text(
+                onboardingList[i].title!,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'cairo',
+                  fontSize: 22,
+                  color: Colorapp.black,
+                ),
+              ),
+
+              SizedBox(height: 30),
               Container(
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: Text(
                   onboardingList[i].body!,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: TextStyle(
+                    height: 1.5,
+                    color: Colorapp.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
                 ),
               ),
             ],
