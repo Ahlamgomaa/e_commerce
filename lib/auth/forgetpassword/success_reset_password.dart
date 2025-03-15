@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../controller/auth/success_reset_password_controller.dart';
 import '../../core/constant/colorapp.dart';
 import '../../view/widgets/auth/custombuttonauth.dart';

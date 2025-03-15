@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/auth/success_signup_controller.dart';
-import '../core/constant/routeapp.dart';
+
 import '../view/widgets/auth/customtexttitle.dart';
 
 class SuccessSignup extends StatelessWidget {

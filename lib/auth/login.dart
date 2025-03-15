@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/controller/auth/signin_controller.dart';
 import 'package:e_commerce_app/core/constant/colorapp.dart';
+import 'package:e_commerce_app/core/function/valid_input.dart';
 
 import 'package:e_commerce_app/view/widgets/auth/custombuttonauth.dart';
 import 'package:e_commerce_app/view/widgets/auth/customtextbody.dart';
@@ -28,44 +29,55 @@ class Login extends StatelessWidget {
 
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 23),
-        child: ListView(
-          children: [
-            Logo(),
-            // SizedBox(height: 25),
-            Customtextmedium(number: 2),
-            SizedBox(height: 10),
-            CustomtextBody(number: 4),
-            SizedBox(height: 30),
-            Customformfield(
-              mycontroller: controller.email,
-              hintText: 'Enter Your Email ',
-              labelText: 'Email',
-              icon: Icons.email_outlined,
-            ),
+        child: Form(
+          key: controller.formstate,
+          child: ListView(
+            children: [
+              Logo(),
+              // SizedBox(height: 25),
+              Customtextmedium(number: 2),
+              SizedBox(height: 10),
+              CustomtextBody(number: 4),
+              SizedBox(height: 30),
+              Customformfield(
+                valid: (val) {
+                  return ValidInput(val!, 5, 100, "email");
+                },
+                mycontroller: controller.email,
+                hintText: 'Enter Your Email ',
+                labelText: 'Email',
+                icon: Icons.email_outlined,
+              ),
 
-            Customformfield(
-              mycontroller: controller.password,
-              hintText: 'Enter Your Password',
-              labelText: 'Password',
-              icon: Icons.lock_outline,
-            ),
-            InkWell(
-              onTap: () {
-                controller.goToForgetPassword();
-              },
-              child: Text("Forget Password?", textAlign: TextAlign.end),
-            ),
-            SizedBox(height: 20),
-            CustomButtonAuth(text: "Sign In", onPressed: () {}),
-            SizedBox(height: 35),
-            Customtextsignuporsinin(
-              text1: r"Don't have an account? ",
-              text2: 'Sign Up',
-              onTap: () {
-                controller.goToSignUp();
-              },
-            ),
-          ],
+              Customformfield(
+                valid: (val) {
+                  return ValidInput(val!, 10, 15, "password");
+                },
+                mycontroller: controller.password,
+                hintText: 'Enter Your Password',
+                labelText: 'Password',
+                icon: Icons.lock_outline,
+              ),
+              InkWell(
+                onTap: () {
+                  controller.goToForgetPassword();
+                },
+                child: Text("Forget Password?", textAlign: TextAlign.end),
+              ),
+              SizedBox(height: 20),
+              CustomButtonAuth(text: "Sign In", onPressed: () {
+                controller.login();
+              }),
+              SizedBox(height: 35),
+              Customtextsignuporsinin(
+                text1: r"Don't have an account? ",
+                text2: 'Sign Up',
+                onTap: () {
+                  controller.goToSignUp();
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

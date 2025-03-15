@@ -10,6 +10,8 @@ import 'package:e_commerce_app/view/widgets/auth/customtexttitle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../core/function/valid_input.dart';
+
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
 
@@ -34,12 +36,20 @@ class ResetPassword extends StatelessWidget {
             SizedBox(height: 30),
 
             Customformfield(
+              valid: (val){
+                return ValidInput(val!, 10, 15, "password");
+
+              },
               mycontroller: controller.password,
               hintText: 'Enter Your Password  ',
               labelText: 'Password',
               icon: Icons.lock_outlined,
             ),
              Customformfield(
+               valid: (val){
+                 return ValidInput(val!, 10, 15, "password");
+
+               },
               mycontroller: controller.confirmPassword,
               hintText: 'Re-Enter Your Password ',
               labelText: 'Confirm Password',

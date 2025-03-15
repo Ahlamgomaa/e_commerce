@@ -10,6 +10,8 @@ import 'package:e_commerce_app/view/widgets/auth/customtexttitle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../core/function/valid_input.dart';
+
 class Forgetpassword extends StatelessWidget {
   const Forgetpassword({super.key});
 
@@ -36,6 +38,10 @@ class Forgetpassword extends StatelessWidget {
             SizedBox(height: 30),
 
             Customformfield(
+              valid: (val){
+                return ValidInput(val!, 5, 100, "email");
+
+              },
               mycontroller: controller.email,
               hintText: 'Enter Your Email ',
               labelText: 'Email',

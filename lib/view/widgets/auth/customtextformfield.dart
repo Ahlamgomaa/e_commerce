@@ -7,17 +7,20 @@ class Customformfield extends StatelessWidget {
     required this.hintText,
     required this.labelText,
     required this.icon,
-    required this.mycontroller,
+    required this.mycontroller, required this.valid,
   });
+
   final String labelText;
   final String hintText;
   final IconData icon;
   final TextEditingController mycontroller;
+  final String Function(String?) valid;
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 25),
       child: TextFormField(
+        validator: valid,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colorapp.primaryColor, width: 2),

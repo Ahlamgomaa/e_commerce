@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 abstract class ResetPasswordController extends GetxController {
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   late TextEditingController password;
    late TextEditingController confirmPassword;
 
@@ -13,7 +14,14 @@ abstract class ResetPasswordController extends GetxController {
 
 class ResetPasswordControllerImp extends ResetPasswordController {
   @override
-  resetPassword() {}
+  resetPassword() {
+    var formdata = formstate.currentState;
+    if (formdata!.validate()) {
+      return 'Valid';
+    } else {
+      return 'Not Valid';
+    }
+  }
   @override
   goToSuccessResetPassword() {
    Get.offNamed(Routeapp.successResetPassword);

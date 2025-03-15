@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 abstract class SignUpController extends GetxController {
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   late TextEditingController email;
   late TextEditingController password;
   late TextEditingController username;
@@ -21,6 +22,12 @@ class SignUpControllerImp extends SignUpController {
 
   @override
   signup() {
+    var formdata=formstate.currentState;
+    if (formdata!.validate()) {
+      return 'Valid';
+    } else {
+      return 'Not Valid';
+    }
   Get.offNamed(Routeapp.checkEmail);
   }
 
