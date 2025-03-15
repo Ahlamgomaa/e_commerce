@@ -7,7 +7,7 @@ class Customformfield extends StatelessWidget {
     required this.hintText,
     required this.labelText,
     required this.icon,
-    required this.mycontroller, required this.valid,
+    required this.mycontroller, required this.valid, required this.isNumber,
   });
 
   final String labelText;
@@ -15,11 +15,13 @@ class Customformfield extends StatelessWidget {
   final IconData icon;
   final TextEditingController mycontroller;
   final String Function(String?) valid;
+  final bool isNumber;
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 25),
       child: TextFormField(
+        keyboardType: isNumber ? TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
         validator: valid,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(

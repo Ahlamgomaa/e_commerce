@@ -38,20 +38,23 @@ class Forgetpassword extends StatelessWidget {
             SizedBox(height: 30),
 
             Customformfield(
-              valid: (val){
-                return ValidInput(val!, 5, 100, "email");
-
+              valid: (val) {
+                return validInput(val!, 5, 100, "email");
               },
               mycontroller: controller.email,
               hintText: 'Enter Your Email ',
               labelText: 'Email',
               icon: Icons.email_outlined,
+              isNumber: false,
             ),
 
             SizedBox(height: 10),
-            CustomButtonAuth(text: "Check ", onPressed: () {
-              controller.goToVerifyCode();
-            }),
+            CustomButtonAuth(
+              text: "Check ",
+              onPressed: () {
+                controller.goToVerifyCode();
+              },
+            ),
             SizedBox(height: 35),
           ],
         ),

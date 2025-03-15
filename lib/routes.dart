@@ -9,7 +9,6 @@ import 'package:e_commerce_app/core/constant/routeapp.dart';
 import 'package:e_commerce_app/view/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
-import 'auth/check_email.dart';
 import 'auth/verify_code_signup.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
@@ -23,7 +22,7 @@ Map<String, Widget Function(BuildContext)> routes = {
   Routeapp.resetPassword:(context)=>ResetPassword(),
   Routeapp.successResetPassword:(context)=>SuccessResetPassword(),
   Routeapp.successSignUp:(context)=>SuccessSignup(),
-  Routeapp.checkEmail:(context)=>CheckEmail(),
+  // Routeapp.checkEmail:(context)=>CheckEmail(),
   Routeapp.verifyCodeSignup:(context)=>VerifyCodeSignup(),
 
 };

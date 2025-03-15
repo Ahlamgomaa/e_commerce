@@ -41,22 +41,24 @@ class Login extends StatelessWidget {
               SizedBox(height: 30),
               Customformfield(
                 valid: (val) {
-                  return ValidInput(val!, 5, 100, "email");
+                  return validInput(val!, 5, 100, "email");
                 },
                 mycontroller: controller.email,
                 hintText: 'Enter Your Email ',
                 labelText: 'Email',
                 icon: Icons.email_outlined,
+                isNumber: false,
               ),
 
               Customformfield(
                 valid: (val) {
-                  return ValidInput(val!, 10, 15, "password");
+                  return validInput(val!, 10, 15, "password");
                 },
                 mycontroller: controller.password,
                 hintText: 'Enter Your Password',
                 labelText: 'Password',
                 icon: Icons.lock_outline,
+                isNumber: false,
               ),
               InkWell(
                 onTap: () {
@@ -65,9 +67,12 @@ class Login extends StatelessWidget {
                 child: Text("Forget Password?", textAlign: TextAlign.end),
               ),
               SizedBox(height: 20),
-              CustomButtonAuth(text: "Sign In", onPressed: () {
-                controller.login();
-              }),
+              CustomButtonAuth(
+                text: "Sign In",
+                onPressed: () {
+                  controller.login();
+                },
+              ),
               SizedBox(height: 35),
               Customtextsignuporsinin(
                 text1: r"Don't have an account? ",

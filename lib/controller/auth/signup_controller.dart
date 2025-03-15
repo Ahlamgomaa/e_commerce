@@ -24,11 +24,12 @@ class SignUpControllerImp extends SignUpController {
   signup() {
     var formdata=formstate.currentState;
     if (formdata!.validate()) {
-      return 'Valid';
+      Get.offNamed(Routeapp.verifyCodeSignup);
+      // Get.delete<SignUpControllerImp>();
     } else {
       return 'Not Valid';
     }
-  Get.offNamed(Routeapp.checkEmail);
+
   }
 
   @override

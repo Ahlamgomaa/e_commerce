@@ -17,7 +17,9 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ResetPasswordControllerImp controller=Get.put(ResetPasswordControllerImp());
+    ResetPasswordControllerImp controller = Get.put(
+      ResetPasswordControllerImp(),
+    );
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -36,29 +38,32 @@ class ResetPassword extends StatelessWidget {
             SizedBox(height: 30),
 
             Customformfield(
-              valid: (val){
-                return ValidInput(val!, 10, 15, "password");
-
+              valid: (val) {
+                return validInput(val!, 10, 15, "password");
               },
               mycontroller: controller.password,
               hintText: 'Enter Your Password  ',
               labelText: 'Password',
               icon: Icons.lock_outlined,
+              isNumber: false,
             ),
-             Customformfield(
-               valid: (val){
-                 return ValidInput(val!, 10, 15, "password");
-
-               },
+            Customformfield(
+              valid: (val) {
+                return validInput(val!, 10, 15, "password");
+              },
               mycontroller: controller.confirmPassword,
               hintText: 'Re-Enter Your Password ',
               labelText: 'Confirm Password',
               icon: Icons.lock_outlined,
+              isNumber: false,
             ),
             SizedBox(height: 10),
-            CustomButtonAuth(text: "Save", onPressed: () {
-              controller.goToSuccessResetPassword();
-            }),
+            CustomButtonAuth(
+              text: "Save",
+              onPressed: () {
+                controller.goToSuccessResetPassword();
+              },
+            ),
             SizedBox(height: 35),
           ],
         ),
