@@ -13,6 +13,8 @@ import 'package:e_commerce_app/view/widgets/auth/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../core/function/alert_exit_app.dart';
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -27,61 +29,64 @@ class Login extends StatelessWidget {
         elevation: 0,
       ),
 
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 23),
-        child: Form(
-          key: controller.formstate,
-          child: ListView(
-            children: [
-              Logo(),
-              // SizedBox(height: 25),
-              Customtextmedium(number: 2),
-              SizedBox(height: 10),
-              CustomtextBody(number: 4),
-              SizedBox(height: 30),
-              Customformfield(
-                valid: (val) {
-                  return validInput(val!, 5, 100, "email");
-                },
-                mycontroller: controller.email,
-                hintText: 'Enter Your Email ',
-                labelText: 'Email',
-                icon: Icons.email_outlined,
-                isNumber: false,
-              ),
+      body: WillPopScope(
+        onWillPop: alertExitApp,
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 23),
+          child: Form(
+            key: controller.formstate,
+            child: ListView(
+              children: [
+                Logo(),
+                // SizedBox(height: 25),
+                Customtextmedium(number: 2),
+                SizedBox(height: 10),
+                CustomtextBody(number: 4),
+                SizedBox(height: 30),
+                Customformfield(
+                  valid: (val) {
+                    return validInput(val!, 5, 100, "email");
+                  },
+                  mycontroller: controller.email,
+                  hintText: 'Enter Your Email ',
+                  labelText: 'Email',
+                  icon: Icons.email_outlined,
+                  isNumber: false,
+                ),
 
-              Customformfield(
-                valid: (val) {
-                  return validInput(val!, 10, 15, "password");
-                },
-                mycontroller: controller.password,
-                hintText: 'Enter Your Password',
-                labelText: 'Password',
-                icon: Icons.lock_outline,
-                isNumber: false,
-              ),
-              InkWell(
-                onTap: () {
-                  controller.goToForgetPassword();
-                },
-                child: Text("Forget Password?", textAlign: TextAlign.end),
-              ),
-              SizedBox(height: 20),
-              CustomButtonAuth(
-                text: "Sign In",
-                onPressed: () {
-                  controller.login();
-                },
-              ),
-              SizedBox(height: 35),
-              Customtextsignuporsinin(
-                text1: r"Don't have an account? ",
-                text2: 'Sign Up',
-                onTap: () {
-                  controller.goToSignUp();
-                },
-              ),
-            ],
+                Customformfield(
+                  valid: (val) {
+                    return validInput(val!, 10, 15, "password");
+                  },
+                  mycontroller: controller.password,
+                  hintText: 'Enter Your Password',
+                  labelText: 'Password',
+                  icon: Icons.lock_outline,
+                  isNumber: false,
+                ),
+                InkWell(
+                  onTap: () {
+                    controller.goToForgetPassword();
+                  },
+                  child: Text("Forget Password?", textAlign: TextAlign.end),
+                ),
+                SizedBox(height: 20),
+                CustomButtonAuth(
+                  text: "Sign In",
+                  onPressed: () {
+                    controller.login();
+                  },
+                ),
+                SizedBox(height: 35),
+                Customtextsignuporsinin(
+                  text1: r"Don't have an account? ",
+                  text2: 'Sign Up',
+                  onTap: () {
+                    controller.goToSignUp();
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
