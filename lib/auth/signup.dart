@@ -72,25 +72,38 @@ class SignUp extends StatelessWidget {
                         isNumber: true,
                       ),
 
-                      Customformfield(
-                        valid: (val) {
-                          return validInput(val!, 10, 15, "password");
-                        },
-                        mycontroller: controller.password,
-                        hintText: 'Enter Your Password',
-                        labelText: 'Password',
-                        icon: Icons.lock_outline,
-                        isNumber: false,
+                      GetBuilder<SignUpControllerImp>(
+                        builder:(controller)=>
+                        Customformfield(
+                          valid: (val) {
+                            return validInput(val!, 10, 15, "password");
+                          },
+                          onTapIcon: (){
+                            controller.showPassword();
+                          }
+                          ,
+                          mycontroller: controller.password,
+                          hintText: 'Enter Your Password',
+                          labelText: 'Password',
+                          icon: Icons.lock_outline,
+                          isNumber: false, obscureText: controller.isshowpassword,
+                        ),
                       ),
-                      Customformfield(
-                        valid: (val) {
-                          return validInput(val!, 10, 15, "password");
-                        },
-                        mycontroller: controller.confirmpassword,
-                        hintText: 'Enter Your Password',
-                        labelText: 'Confirm Password',
-                        icon: Icons.lock_outline,
-                        isNumber: false,
+                      GetBuilder<SignUpControllerImp>(
+                        builder:(controller)=>
+                         Customformfield(
+                          valid: (val) {
+                            return validInput(val!, 10, 15, "password");
+                          },
+                          onTapIcon: (){
+                            controller.showPassword();
+                          },
+                          mycontroller: controller.confirmpassword,
+                          hintText: 'Enter Your Password',
+                          labelText: 'Confirm Password',
+                          icon: Icons.lock_outline,
+                          isNumber: false, obscureText: controller.isshowpassword,
+                        ),
                       ),
 
                       SizedBox(height: 10),

@@ -7,7 +7,10 @@ class Customformfield extends StatelessWidget {
     required this.hintText,
     required this.labelText,
     required this.icon,
-    required this.mycontroller, required this.valid, required this.isNumber,
+    required this.mycontroller,
+    required this.valid,
+    required this.isNumber,
+    this.obscureText, this.onTapIcon,
   });
 
   final String labelText;
@@ -16,13 +19,21 @@ class Customformfield extends StatelessWidget {
   final TextEditingController mycontroller;
   final String Function(String?) valid;
   final bool isNumber;
+  final bool? obscureText;
+  final void Function()? onTapIcon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 25),
       child: TextFormField(
-        keyboardType: isNumber ? TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
+        keyboardType:
+            isNumber
+                ? TextInputType.numberWithOptions(decimal: true)
+                : TextInputType.text,
         validator: valid,
+        controller: mycontroller,
+        obscureText: obscureText == null|| obscureText == false ? false : true,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colorapp.primaryColor, width: 2),
@@ -42,7 +53,10 @@ class Customformfield extends StatelessWidget {
           ),
           hintText: hintText,
           hintStyle: TextStyle(color: Colorapp.grey, fontSize: 14),
-          suffixIcon: Icon(icon, color: Colorapp.grey),
+          suffixIcon: InkWell(
+            onTap: onTapIcon,
+            child: Icon(icon, color: Colorapp.grey),
+          ),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
         ),
       ),

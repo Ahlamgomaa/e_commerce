@@ -54,15 +54,22 @@ class Login extends StatelessWidget {
                   isNumber: false,
                 ),
 
-                Customformfield(
-                  valid: (val) {
-                    return validInput(val!, 10, 15, "password");
-                  },
-                  mycontroller: controller.password,
-                  hintText: 'Enter Your Password',
-                  labelText: 'Password',
-                  icon: Icons.lock_outline,
-                  isNumber: false,
+                GetBuilder<SigninControllerImp>(
+                  builder:(controller)=>
+                  Customformfield(
+                    valid: (val) {
+                      return validInput(val!, 10, 15, "password");
+                    },
+                    onTapIcon: (){
+                      controller.showPassword();
+                    },
+                    mycontroller: controller.password,
+                    hintText: 'Enter Your Password',
+                    labelText: 'Password',
+                    icon: Icons.lock_outline,
+                    isNumber: false,
+                    obscureText: controller.isShowPassword,
+                  ),
                 ),
                 InkWell(
                   onTap: () {

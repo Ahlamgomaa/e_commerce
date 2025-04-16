@@ -45,7 +45,7 @@ class ResetPassword extends StatelessWidget {
               hintText: 'Enter Your Password  ',
               labelText: 'Password',
               icon: Icons.lock_outlined,
-              isNumber: false,
+              isNumber: false, obscureText: true,
             ),
             Customformfield(
               valid: (val) {
@@ -55,7 +55,7 @@ class ResetPassword extends StatelessWidget {
               hintText: 'Re-Enter Your Password ',
               labelText: 'Confirm Password',
               icon: Icons.lock_outlined,
-              isNumber: false,
+              isNumber: false, obscureText: true,
             ),
             SizedBox(height: 10),
             CustomButtonAuth(

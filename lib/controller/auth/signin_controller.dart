@@ -6,7 +6,6 @@ abstract class SigninController extends GetxController {
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   late TextEditingController email;
   late TextEditingController password;
-
   login();
 
   goToSignUp();
@@ -15,6 +14,12 @@ abstract class SigninController extends GetxController {
 }
 
 class SigninControllerImp extends SigninController {
+
+  bool isShowPassword=true;
+  showPassword(){
+    isShowPassword=isShowPassword==true?false:true;
+    update();
+  }
   @override
   login() {
     var formdata = formstate.currentState;
@@ -27,7 +32,7 @@ class SigninControllerImp extends SigninController {
 
   @override
   goToSignUp() {
-    Get.offNamed(Routeapp.signUp);
+    Get.offNamed(RouteApp.signUp);
   }
 
   @override
@@ -46,6 +51,6 @@ class SigninControllerImp extends SigninController {
 
   @override
   goToForgetPassword() {
-    Get.offNamed(Routeapp.forgetPassword);
+    Get.offNamed(RouteApp.forgetPassword);
   }
 }

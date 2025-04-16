@@ -24,7 +24,7 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   }
   @override
   goToSuccessResetPassword() {
-   Get.offNamed(Routeapp.successResetPassword);
+   Get.offNamed(RouteApp.successResetPassword);
   }
 
   @override

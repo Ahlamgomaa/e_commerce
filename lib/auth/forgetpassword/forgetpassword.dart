@@ -45,7 +45,7 @@ class Forgetpassword extends StatelessWidget {
               hintText: 'Enter Your Email ',
               labelText: 'Email',
               icon: Icons.email_outlined,
-              isNumber: false,
+              isNumber: false, obscureText: false,
             ),
 
             SizedBox(height: 10),

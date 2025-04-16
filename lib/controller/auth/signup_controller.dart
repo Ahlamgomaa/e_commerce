@@ -11,25 +11,33 @@ abstract class SignUpController extends GetxController {
   late TextEditingController confirmpassword;
 
   signup();
+
   goToSignIn();
 }
 
 class SignUpControllerImp extends SignUpController {
+  bool isshowpassword = true;
+
+  showPassword() {
+    isshowpassword = isshowpassword == true ? false : true;
+    update();
+  }
+
   @override
   goToSignIn() {
-      Get.offNamed(Routeapp.login);
+    Get.offNamed(RouteApp.login);
   }
 
   @override
   signup() {
-    var formdata=formstate.currentState;
+    var formdata = formstate.currentState;
     if (formdata!.validate()) {
-      Get.offNamed(Routeapp.verifyCodeSignup);
+      Get.offNamed(RouteApp.verifyCodeSignup);
+      //automatically delete with using get pages
       // Get.delete<SignUpControllerImp>();
     } else {
       return 'Not Valid';
     }
-
   }
 
   @override

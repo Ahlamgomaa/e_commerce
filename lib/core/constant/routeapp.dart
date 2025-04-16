@@ -1,12 +1,12 @@
-class Routeapp {
+class RouteApp {
   static const String login = '/login'; 
   static const String signUp = '/signup';  
   static const String onBoarding = '/onboarding'; 
-  static const String forgetPassword='/forgetpassword';
-  static const String resetPassword='/resetpassordw';
-  static const String verifyCode ='/verifycode ';
-  static const String successResetPassword='/successresetpassword';
+  static const String forgetPassword='/forget password';
+  static const String resetPassword='/reset password';
+  static const String verifyCode ='/verify ';
+  static const String successResetPassword='/successfulnesses';
   static const String successSignUp='/successSignUp';
-  static const String checkEmail='/checkemail';
-  static const String verifyCodeSignup ='/verifycodesignup ';
+  static const String checkEmail='/check email';
+  static const String verifyCodeSignup ='/verify code signup ';
 }

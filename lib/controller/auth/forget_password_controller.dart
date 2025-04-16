@@ -15,7 +15,7 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
   checkemail() {}
   @override
   goToVerifyCode() {
-   Get.offNamed(Routeapp.verifyCode);
+   Get.offNamed(RouteApp.verifyCode);
   }
 
   @override

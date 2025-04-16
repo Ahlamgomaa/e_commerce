@@ -29,7 +29,7 @@ class VerifyCodeControllerImp extends VerifyCodeController {
   
   @override
   goToResetPassword() {
-    Get.offNamed(Routeapp.resetPassword);
+    Get.offNamed(RouteApp.resetPassword);
     
   }
 }
