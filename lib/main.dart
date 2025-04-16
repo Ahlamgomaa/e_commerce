@@ -6,6 +6,8 @@ import 'package:e_commerce_app/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'binding/initialBinding.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
@@ -23,6 +25,7 @@ class EcommerceApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: controller.language,
       theme: controller.themeapp,
+      initialBinding: InitialBinding(),
       // home: Language(),
       // routes: routes,
       getPages: routes,
