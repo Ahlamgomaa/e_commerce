@@ -12,17 +12,27 @@ class Crud {
     try {
       if (await checkInternet()) {
         var response = await dio.post(linkUrl, data: data);
+
         if (response.statusCode == 200 || response.statusCode == 201) {
-          Map responseBody = jsonDecode(response.data);
+
+          Map<String, dynamic> responseBody =
+              response.data is String
+                  ? jsonDecode(response.data)
+                  : response.data;
+
+          print("RESPONSE BODY ===> $responseBody");
+
 
           return Right(responseBody);
         } else {
           return Left(StatusRequest.serverFailure);
+
         }
       } else {
         return Left(StatusRequest.offlineFailure);
       }
-    } catch (_) {
+    } catch (e) {
+      print("ERROR ===> $e");
       return Left(StatusRequest.serverFailure);
     }
   }

@@ -6,18 +6,19 @@ import 'package:e_commerce_app/auth/forgetpassword/success_reset_password.dart';
 import 'package:e_commerce_app/auth/success_signup.dart';
 import 'package:e_commerce_app/auth/forgetpassword/veryfiy_code.dart';
 import 'package:e_commerce_app/core/constant/routeapp.dart';
-import 'package:e_commerce_app/test.dart';
-import 'package:e_commerce_app/view/screens/language.dart';
+
+import 'package:e_commerce_app/test_view.dart';
+// import 'package:e_commerce_app/view/screens/language.dart';
 import 'package:e_commerce_app/view/screens/onboarding.dart';
 
 import 'package:get/get.dart';
 
 import 'auth/verify_code_signup.dart';
-import 'core/MiddleWare/middleware.dart';
+// import 'core/MiddleWare/middleware.dart';
 
 List<GetPage<dynamic>>? routes = [
   //GetPage(name: "/", page: () => Language(), middlewares: [MiddleWare()]),
-  GetPage(name: "/", page: () => Test()),
+  GetPage(name: "/", page: () => TestView()),
   GetPage(name: RouteApp.onBoarding, page: () => OnBoarding()),
   GetPage(name: RouteApp.signUp, page: () => SignUp()),
   GetPage(name: RouteApp.login, page: () => Login()),
