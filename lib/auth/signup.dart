@@ -32,7 +32,7 @@ class SignUp extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 23),
                 child: Form(
-                  key: controller.formstate,
+                  key: controller.formState,
                   child: ListView(
                     children: [
                       // SizedBox(height: 25),
@@ -86,7 +86,7 @@ class SignUp extends StatelessWidget {
                           hintText: 'Enter Your Password',
                           labelText: 'Password',
                           icon: Icons.lock_outline,
-                          isNumber: false, obscureText: controller.isshowpassword,
+                          isNumber: false, obscureText: controller.isShowPassword,
                         ),
                       ),
                       GetBuilder<SignUpControllerImp>(
@@ -98,11 +98,11 @@ class SignUp extends StatelessWidget {
                           onTapIcon: (){
                             controller.showPassword();
                           },
-                          mycontroller: controller.confirmpassword,
+                          mycontroller: controller.confirmPassword,
                           hintText: 'Enter Your Password',
                           labelText: 'Confirm Password',
                           icon: Icons.lock_outline,
-                          isNumber: false, obscureText: controller.isshowpassword,
+                          isNumber: false, obscureText: controller.isShowPassword,
                         ),
                       ),
 
