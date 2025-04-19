@@ -25,7 +25,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: CustomtextTitle(number: 3),
-        backgroundColor: Colorapp.backgroundcolor,
+        backgroundColor: ColorApp.backgroundColor,
         elevation: 0,
       ),
 

@@ -17,7 +17,7 @@ class SuccessResetPassword extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: CustomtextTitle(number: 18),
-        backgroundColor: Colorapp.backgroundcolor,
+        backgroundColor: ColorApp.backgroundColor,
         elevation: 0,
       ),
       body: Container(
@@ -28,7 +28,7 @@ class SuccessResetPassword extends StatelessWidget {
               child: Icon(
                 Icons.check_circle_outline,
                 size: 150,
-                color: Colorapp.primaryColor,
+                color: ColorApp.primaryColor,
               ),
             ),
             SizedBox(height: 20),

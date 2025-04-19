@@ -11,7 +11,7 @@ class CustomtextTitle extends StatelessWidget {
       "$number".tr,
       style: Theme.of(
         context,
-      ).textTheme.headlineLarge!.copyWith(color: Colorapp.grey),
+      ).textTheme.headlineLarge!.copyWith(color: ColorApp.grey),
     );
   }
 }

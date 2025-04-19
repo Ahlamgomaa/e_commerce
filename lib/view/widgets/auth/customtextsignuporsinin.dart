@@ -25,7 +25,7 @@ class Customtextsignuporsinin extends StatelessWidget {
           child: Text(
             text2,
             style: TextStyle(
-              color: Colorapp.primaryColor,
+              color: ColorApp.primaryColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),

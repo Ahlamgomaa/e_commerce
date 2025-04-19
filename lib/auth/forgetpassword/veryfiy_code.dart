@@ -17,7 +17,7 @@ class VeryfiyCode extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: CustomtextTitle(number: 9),
-        backgroundColor: Colorapp.backgroundcolor,
+        backgroundColor: ColorApp.backgroundColor,
         elevation: 0,
       ),
       body: Container(
@@ -34,7 +34,7 @@ class VeryfiyCode extends StatelessWidget {
               fieldWidth: 50,
               borderRadius: BorderRadius.circular(20),
               numberOfFields: 5,
-              borderColor: Colorapp.primaryColor,
+              borderColor: ColorApp.primaryColor,
 
               showFieldAsBox: true,
 

@@ -22,7 +22,7 @@ class Customdotcontroller extends StatelessWidget {
                   width: controller.currentpage == i ? 20 : 6,  
                   height: 6,
                   decoration: BoxDecoration(
-                    color: Colorapp.primaryColor,
+                    color: ColorApp.primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),

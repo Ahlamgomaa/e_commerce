@@ -36,7 +36,7 @@ class Customformfield extends StatelessWidget {
         obscureText: obscureText == null|| obscureText == false ? false : true,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colorapp.primaryColor, width: 2),
+            borderSide: BorderSide(color: ColorApp.primaryColor, width: 2),
             borderRadius: BorderRadius.circular(40),
           ),
           floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -46,16 +46,16 @@ class Customformfield extends StatelessWidget {
             child: Text(
               labelText,
               style: TextStyle(
-                color: Colorapp.primaryColor,
+                color: ColorApp.primaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           hintText: hintText,
-          hintStyle: TextStyle(color: Colorapp.grey, fontSize: 14),
+          hintStyle: TextStyle(color: ColorApp.grey, fontSize: 14),
           suffixIcon: InkWell(
             onTap: onTapIcon,
-            child: Icon(icon, color: Colorapp.grey),
+            child: Icon(icon, color: ColorApp.grey),
           ),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
         ),

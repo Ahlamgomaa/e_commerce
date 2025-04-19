@@ -16,7 +16,7 @@ class Custombutton extends GetView<Onboardingcontrollerimp> {
         onPressed: () {
           controller.next();
         },
-        color: Colorapp.primaryColor,
+        color: ColorApp.primaryColor,
         textColor: Colors.white,
         child: Text(
           "Continue",

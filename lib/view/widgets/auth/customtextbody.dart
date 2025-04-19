@@ -14,7 +14,7 @@ final int number;
                 textAlign: TextAlign.center,
                 style: Theme.of(
                   context,
-                ).textTheme.bodySmall!.copyWith(color: Colorapp.grey),
+                ).textTheme.bodySmall!.copyWith(color: ColorApp.grey),
               ),
             );
   }

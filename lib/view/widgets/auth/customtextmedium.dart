@@ -14,7 +14,7 @@ class Customtextmedium extends StatelessWidget{
               textAlign: TextAlign.center,
               style: Theme.of(
                 context,
-              ).textTheme.headlineMedium!.copyWith(color: Colorapp.black),
+              ).textTheme.headlineMedium!.copyWith(color: ColorApp.black),
             );
   }
 }

@@ -11,7 +11,7 @@ final  void Function()? onPressed;
               padding: EdgeInsets.symmetric(horizontal: 100),
               width: double.infinity,
               child: MaterialButton(
-                color: Colorapp.primaryColor,
+                color: ColorApp.primaryColor,
                 textColor: Colors.white,
                 onPressed: onPressed,
                 child: Text(

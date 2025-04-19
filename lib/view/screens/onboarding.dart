@@ -14,7 +14,7 @@ class OnBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(Onboardingcontrollerimp());
     return Scaffold(
-      backgroundColor: Colorapp.backgroundcolor,
+      backgroundColor: ColorApp.backgroundColor,
       body: SafeArea(
         child: Column(
           children: [

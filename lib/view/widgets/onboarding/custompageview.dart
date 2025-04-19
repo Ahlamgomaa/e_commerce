@@ -35,7 +35,7 @@ class Custompageview extends GetView<Onboardingcontrollerimp> {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'cairo',
                   fontSize: 22,
-                  color: Colorapp.black,
+                  color: ColorApp.black,
                 ),
               ),
 
@@ -48,7 +48,7 @@ class Custompageview extends GetView<Onboardingcontrollerimp> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     height: 1.5,
-                    color: Colorapp.grey,
+                    color: ColorApp.grey,
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                   ),
